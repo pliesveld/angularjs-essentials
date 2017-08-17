@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="parking">
+    <head>
+        <title>Parking</title>
+    </head>
+    <body ng-controller="ParkingController">
+        <h3>Parking</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="car in cars">
+                    <td>{{car.plate}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <input type="text" ng-model="car.plate">
+        <button ng-click="park(car)">Park</button>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
